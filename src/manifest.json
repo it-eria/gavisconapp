@@ -1,0 +1,13 @@
+{
+  "name": "Gaviscon",
+  "short_name": "Gaviscon",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#13a9ab",
+  "theme_color": "#13a9ab"
+}

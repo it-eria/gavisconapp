@@ -1,0 +1,188 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+// Black
+@font-face {
+  font-family: 'HelveticaBlack';
+  src: url('#{$font-path}/HelveticaBlack.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaBlackItalic';
+  src: url('#{$font-path}/HelveticaBlackItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Bold
+@font-face {
+  font-family: 'HelveticaBold';
+  src: url('#{$font-path}/HelveticaBold.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaBoldItalic';
+  src: url('#{$font-path}/HelveticaBoldItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Heavy
+@font-face {
+  font-family: 'HelveticaHeavy';
+  src: url('#{$font-path}/HelveticaHeavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaHeavyItalic';
+  src: url('#{$font-path}/HelveticaHeavyItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Italic
+@font-face {
+  font-family: 'HelveticaItalic';
+  src: url('#{$font-path}/HelveticaItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Light
+@font-face {
+  font-family: 'HelveticaLight';
+  src: url('#{$font-path}/HelveticaLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaLightItalic';
+  src: url('#{$font-path}/HelveticaLightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Medium
+@font-face {
+  font-family: 'HelveticaMedium';
+  src: url('#{$font-path}/HelveticaMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaMediumItalic';
+  src: url('#{$font-path}/HelveticaMediumItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Regular
+@font-face {
+  font-family: 'HelveticaRegular';
+  src: url('#{$font-path}/HelveticaRegular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Thin
+@font-face {
+  font-family: 'HelveticaThin';
+  src: url('#{$font-path}/HelveticaThin.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaThinItalic';
+  src: url('#{$font-path}/HelveticaThinItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// UltraLight
+@font-face {
+  font-family: 'HelveticaUltraLight';
+  src: url('#{$font-path}/HelveticaUltraLight.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'HelveticaUltraLightItalic';
+  src: url('#{$font-path}/HelveticaUltraLightItalic.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+$Black: 'HelveticaBlack';
+$BlackItalic: 'HelveticaBlackItalic';
+$Bold: 'HelveticaBold';
+$BoldItalic: 'HelveticaBoldItalic';
+$Heavy: 'HelveticaHeavy';
+$HeavyItalic: 'HelveticaHeavyItalic';
+$Italic: 'HelveticaItalic';
+$Light: 'HelveticaLight';
+$LightItalic: 'HelveticaLightItalic';
+$Medium: 'HelveticaMedium';
+$MediumItalic: 'HelveticaMediumItalic';
+$Regular: 'HelveticaRegular';
+$Thin: 'HelveticaThin';
+$ThinItalic: 'HelveticaThinItalic';
+$UltraLight: 'HelveticaUltraLight';
+$UltraLightItalic: 'HelveticaUltraLightItalic';
+
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

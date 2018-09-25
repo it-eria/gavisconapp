@@ -1,0 +1,373 @@
+<ion-content>
+  <div class="slides-wrapper" [ngStyle]="{'left.px': -leftOffset}">
+    <div class="slide slide--1">
+      <h1>Динаміка ринку препаратів від печії*<br>за 2017-2018 роки</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <div class="slide--1__b-inf">
+              <h4>Ринок препаратів від печії<br>2017 рік</h4>
+              <ion-row>
+                <ion-col col-4>
+                  <div class="circle">
+                    <img src="assets/imgs/icon-1.png" alt="icon-1">
+                  </div>
+                  <span class="percents">+22%</span>
+                  <small>в грошовому<br>еквіваленті</small>
+                </ion-col>
+                <ion-col col-4>
+                  <div class="circle">
+                    <img src="assets/imgs/icon-2.png" alt="icon-2">
+                  </div>
+                  <span class="percents">+10%</span>
+                  <small>в упаковках</small>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+          <ion-col col-6>
+            <div class="slide--1__b-inf">
+              <h4>Ринок препаратів від печії<br>за пів року 2018</h4>
+              <ion-row>
+                <ion-col col-4>
+                  <div class="circle">
+                    <img src="assets/imgs/icon-1.png" alt="icon-1">
+                  </div>
+                  <span class="percents">+24%</span>
+                  <small>в грошовому<br>еквіваленті</small>
+                </ion-col>
+                <ion-col col-4>
+                  <div class="circle">
+                    <img src="assets/imgs/icon-2.png" alt="icon-2">
+                  </div>
+                  <span class="percents">+4%</span>
+                  <small>в упаковках</small>
+                </ion-col>
+              </ion-row>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="slide slide--2">
+      <h1>Актуалізація<br>проблеми*</h1>
+      <img src="assets/imgs/slides-2-inf.png" alt="">
+    </div>
+    <div class="slide slide--3">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <div class="circle" (click)="toggleActiveClass($event, 'active');">
+              ГЕРХ
+            </div>
+            <div class="circle" (click)="toggleActiveClass($event, 'active');">
+              Функціональна<br>диспепсія
+            </div>
+            <div class="circle" (click)="toggleActiveClass($event, 'wrong');">
+              Безсоння
+            </div>
+            <div class="circle" (click)="toggleActiveClass($event, 'active');">
+              Нераціональне<br>
+              харчування
+            </div>
+          </ion-col>
+          <ion-col col-8>
+            <h1 style="text-align: center;">Основні причини<br>виникнення печії*</h1>
+            <div class="photos">
+              <img src="assets/imgs/slide-3_1.png" alt="" [ngClass]="{'show': writeAnswers <= 1 }">
+              <img src="assets/imgs/slide-3_2.png" alt="" [ngClass]="{'show': writeAnswers == 2 }">
+              <img src="assets/imgs/slide-3_3.png" alt="" [ngClass]="{'show': writeAnswers == 3 }">
+              <img src="assets/imgs/slide-3_4.png" alt="" [ngClass]="{'show': writeAnswers == 4 }">
+              <img src="assets/imgs/slide-3_5.png" alt="" [ngClass]="{'show': writeAnswers == 5 }">
+              <img src="assets/imgs/slide-3_6.png" alt="" [ngClass]="{'show': writeAnswers >= 6 }">
+            </div>
+          </ion-col>
+          <ion-col col-2>
+            <div class="circle" (click)="toggleActiveClass($event, 'active');">
+              Вагітність
+            </div>
+            <div class="circle" (click)="toggleActiveClass($event, 'active');">
+              Ожиріння
+            </div>
+            <div class="circle" (click)="toggleActiveClass($event, 'wrong');">
+              Відмова<br>від паління
+            </div>
+            <div class="circle" (click)="toggleActiveClass($event, 'active');">
+                Пептичні<br>виразки<br>12-палої кишки<br>і шлунка
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>      
+    </div>
+    <div class="slide slide--4">
+      <h1>Основні діючі речовини безрецептурних препаратів,<br>які застосовують при печії*</h1>
+      <table>
+        <tr>
+          <td>Діюча<br>речовина</td>
+          <td>Швидко/Ефективно<br>долає печію/ГЕРХ</td>
+          <td>Довготривала дія<br>(до/протягом 4 годин)</td>
+          <td>Не впливає<br>на процес<br>травлення</td>
+          <td>Можна приймати<br>у весь період вагітності<br><small>(за показаннями, без обов’язкової<br>консультації  з лікарем)</small></td>
+          <td>Чинить<br>антирефлюксну<br>дію</td>
+        </tr>
+        <tr>
+          <td>Альгінат натрію</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Алюмінію фосфат</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Алюмінію гідроксид + <br>магнію гідроксид</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Кальцію карбонат + <br>магнію карбонат</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <div class="draggable-obj-row">
+        <div class="draggable-obj-row__item">
+          <a href="#" class="drag drag--ppp"></a>
+          <span>Повністю відповідає<br>твердженню</span>
+        </div>
+        <div class="draggable-obj-row__item">
+          <a href="#" class="drag drag--pp"></a>
+          <span>Відповідає твердженню,<br>але є деякі обмеження</span>
+        </div>
+        <div class="draggable-obj-row__item">
+          <a href="#" class="drag drag--p"></a>
+          <span>Майже не відповідає<br>твердженню</span>
+        </div>
+        <div class="draggable-obj-row__item">
+          <a href="#" class="drag drag--m"></a>
+          <span>інформація відсутня<br>в інструкції</span>
+        </div>
+        <div class="draggable-obj-row__item">
+          <span>
+            Невірна відповідь відмічена<br>сірим кольором.
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--5">
+      <h1>Безрецептурні<br>препарати від печії</h1>
+      <div class="half-block">
+        <div class="circle" (click)="toggleActiveClass($event, 'selected');">
+          <span>Альгінати</span>
+          <img src="assets/imgs/selected-left.png" alt="" style="max-width: 390px">
+        </div>
+      </div>
+      <div class="half-block">
+        <div class="circle" (click)="toggleActiveClass($event, 'selected');">
+          <span>Антациди</span>
+          <img src="assets/imgs/selected-right.png" alt="" style="max-width: 480px">
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--6">
+      <h1>Аналіз альгінатів<br>та антацидів</h1>
+      <h2>Швидкість настання ефекту</h2>
+      <h2>Вплив на соляну кислоту</h2>
+      <h2>Тривалість дії</h2>
+      <h2>Наявність<br>антирефлюксного ефекту</h2>
+    </div>
+    <div class="slide slide--6 questions"
+         [ngClass]="{'questions--result': showQuestionResults}">
+      <h1>Аналіз альгінатів<br>та антацидів</h1>
+      <div class="b-question" 
+        *ngFor="let question of questions;" 
+        [ngStyle]="{'opacity': ((questionId == question.numOfQuestion) ? 1 : 0), 'z-index': ((questionId == question.numOfQuestion) ? 500 : 1)}">
+        <div class="answers">
+          <h4>Альгінати</h4>
+          <a href="#" class="answer" *ngFor="let answer of question.leftAnswers">
+            <input type="radio"
+                   [attr.name]="question.radioLeft" 
+                   [attr.value]="answer.answer" 
+                   (click)="changeQuestionId($event, question.isLeftChecked = true, question.isRightChecked);">
+            <label>
+              {{answer.answer}}
+            </label>
+          </a>
+        </div>
+        <div class="question">
+          <h2>{{question.question}}</h2>
+          <div class="descriptions">
+            <small *ngFor="let desc of question.questionDesc; let i=index">{{i+1}}. {{desc.desc}}</small>
+          </div>
+        </div>
+        <div class="answers">
+          <h4>Антациди</h4>
+          <a href="#" class="answer" *ngFor="let answer of question.rightAnswers">
+            <input type="radio"
+                   [attr.name]="question.radioRight"
+                   [attr.value]="answer.answer" 
+                   (click)="changeQuestionId($event, question.isLeftChecked, question.isRightChecked = true);">
+            <label>
+              {{answer.answer}}
+            </label>
+          </a>
+        </div>
+      </div>
+      <div class="b-question b-result" *ngIf="showQuestionResults">
+        <div class="answers">
+          <h4>Альгінати</h4>
+          <a href="#" class="answer">
+            <label>
+              {{questionsResults.leftSidePts}}
+            </label>
+          </a>
+        </div>
+        <div class="question">
+          <h2>
+            Cума балів
+          </h2>
+        </div>
+        <div class="answers">
+          <h4>Антациди</h4>
+          <a href="#" class="answer">
+            <label>
+              {{questionsResults.rightSidePts}}
+            </label>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide--7">
+      <h1>Гавіскон® під час вагітності*</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-5>
+            <img src="assets/imgs/slide-7-inf.png" alt="">
+          </ion-col>
+          <ion-col col-7>
+            <video width="640" height="360" controls>
+              <source src="assets/media/pregnant.mp4" type="video/mp4">
+            </video>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="slide slide--8">
+      <h1>Продукція Гавіскон®*</h1>
+    </div>
+    <div class="slide slide--9">
+      <h1>Портрети пацієнтів</h1>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+              <div class="front">
+                <img src="assets/imgs/photo-1.png" alt="">
+              </div>
+              <div class="back">
+                <p>
+                  Дайте, будь ласка, щось від печії, що можна вагітним 
+                </p>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+              <div class="front">
+                <img src="assets/imgs/photo-2.png" alt="">
+              </div>
+              <div class="back">
+                <p>
+                  Мені потрібно щось від печії, а також від розладів травлення
+                </p>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+              <div class="front">
+                <img src="assets/imgs/photo-3.png" alt="">
+              </div>
+              <div class="back">
+                <p>
+                  Я  маю підвищену кислотність і часто відчуваю печію. Що можете порадити?
+                </p>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+              <div class="front">
+                <img src="assets/imgs/photo-4.png" alt="">
+              </div>
+              <div class="back">
+                <p>
+                  Останнім часом відчуваю печіння та кислий присмак в роті, можливо, через стресові тижні. Можете щось порадити? 
+                </p>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+              <div class="front">
+                <img src="assets/imgs/photo-5.png" alt="">
+              </div>
+              <div class="back">
+                <p>
+                  Порадьте щось від печії, відчуваю печіння після швидких перекусів і фастфуду. 
+                </p>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col col-4>
+            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+              <div class="front">
+                <img src="assets/imgs/photo-6.png" alt="">
+              </div>
+              <div class="back">
+                <p>
+                  Дайте, будь ласка, омепразол. 
+                </p>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="slide slide--10" (click)="changeSlide('gotoFirst')"></div>
+  </div>
+
+  <div [ngClass]="{'nav-panel': true, 'nav-panel--white': currentSlide == 9 || (currentSlide == 7 && showQuestionResults)}" *ngIf="!(currentSlide == countOfSlides)">
+    <div class="buttons-panel">
+      <button ion-button 
+              [ngClass]="{'ctrl-btn': true, 'prev-btn': true, 'first-slide': isFirst}"
+              (click)="changeSlide('prev');">
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+      <button ion-button 
+              [ngClass]="{'ctrl-btn': true, 'next-btn': true, 'last-slide': isLast}"
+              (click)="changeSlide('next');">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </button>
+    </div>
+    <div class="additional-inf">
+      <p [ngClass]="{'block': !isFirst && !(currentSlide == 4), 'block--long': currentSlide == 5}" *ngIf="!(currentSlide == 6 || currentSlide == 9 || currentSlide == 7)">{{ bottomText[currentSlide-1] }}</p>
+      <img src="assets/imgs/icon-3.png" alt="icon" *ngIf="!isFirst && !(currentSlide == 4) && !(currentSlide == 6 ||  currentSlide == 9)">
+      <img src="assets/imgs/icon-3_white.png" alt="icon" *ngIf="!isFirst && !(currentSlide == 4) && !(currentSlide == 6 ||  currentSlide == 9)">
+      <small>Матеріал призначений для спеціалістів у сфері охорони здоров’я.</small>
+    </div>
+  </div>
+</ion-content>

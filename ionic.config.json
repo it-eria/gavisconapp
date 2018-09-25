@@ -1,0 +1,7 @@
+{
+  "name": "gaviscon-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
