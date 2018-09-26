@@ -1,11 +1,12 @@
 <ion-content>
+  <div class="zero-slide" [ngClass]="{'zero-slide--hide': showZeroSlide}" (click)="showZeroSlide = !showZeroSlide"></div>
   <div class="slides-wrapper" [ngStyle]="{'left.px': -leftOffset}">
-    <div class="slide slide--1">
+    <div class="slide slide--1" [class.active]="showZeroSlide && (currentSlide == 1)">
       <h1>Динаміка ринку препаратів від печії*<br>за 2017-2018 роки</h1>
       <ion-grid>
         <ion-row>
           <ion-col col-6>
-            <div class="slide--1__b-inf">
+            <div class="slide--1__b-inf left">
               <h4>Ринок препаратів від печії<br>2017 рік</h4>
               <ion-row>
                 <ion-col col-4>
@@ -26,7 +27,7 @@
             </div>
           </ion-col>
           <ion-col col-6>
-            <div class="slide--1__b-inf">
+            <div class="slide--1__b-inf right">
               <h4>Ринок препаратів від печії<br>за пів року 2018</h4>
               <ion-row>
                 <ion-col col-4>
@@ -49,9 +50,22 @@
         </ion-row>
       </ion-grid>
     </div>
-    <div class="slide slide--2">
+    <div class="slide slide--2" [class.active]="currentSlide == 2">
       <h1>Актуалізація<br>проблеми*</h1>
-      <img src="assets/imgs/slides-2-inf.png" alt="">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-1></ion-col>
+          <ion-col col-3>
+            <img src="assets/imgs/slide-2_1.png" alt="" class="slide--2__img-1">
+          </ion-col>
+          <ion-col col-4>
+            <img src="assets/imgs/slide-2_2.png" alt="" class="slide--2__img-2">
+          </ion-col>
+          <ion-col col-3>
+            <img src="assets/imgs/slide-2_3.png" alt="" class="slide--2__img-3">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
     <div class="slide slide--3">
       <ion-grid>
@@ -112,55 +126,55 @@
         </tr>
         <tr>
           <td>Альгінат натрію</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="drop-cell ppp" dragula="COPYABLE"></td>
+          <td class="drop-cell ppp" dragula="COPYABLE"></td>
+          <td class="drop-cell ppp" dragula="COPYABLE"></td>
+          <td class="drop-cell ppp" dragula="COPYABLE"></td>
+          <td class="drop-cell ppp" dragula="COPYABLE"></td>
         </tr>
         <tr>
           <td>Алюмінію фосфат</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="drop-cell pp" dragula="COPYABLE"></td>
+          <td class="drop-cell pp p" dragula="COPYABLE"></td>
+          <td class="drop-cell pp p" dragula="COPYABLE"></td>
+          <td class="drop-cell pp" dragula="COPYABLE"></td>
+          <td class="drop-cell m" dragula="COPYABLE"></td>
         </tr>
         <tr>
           <td>Алюмінію гідроксид + <br>магнію гідроксид</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="drop-cell pp" dragula="COPYABLE"></td>
+          <td class="drop-cell pp p" dragula="COPYABLE"></td>
+          <td class="drop-cell pp p" dragula="COPYABLE"></td>
+          <td class="drop-cell p" dragula="COPYABLE"></td>
+          <td class="drop-cell m" dragula="COPYABLE"></td>
         </tr>
         <tr>
           <td>Кальцію карбонат + <br>магнію карбонат</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="pp" dragula="COPYABLE"></td>
+          <td class="pp p" dragula="COPYABLE"></td>
+          <td class="pp p" dragula="COPYABLE"></td>
+          <td class="p" dragula="COPYABLE"></td>
+          <td class="m" dragula="COPYABLE"></td>
         </tr>
       </table>
-      <div class="draggable-obj-row">
-        <div class="draggable-obj-row__item">
+      <div class="draggable-obj-row" dragula="COPYABLE">
+        <div class="draggable-obj-row__item ppp">
           <a href="#" class="drag drag--ppp"></a>
           <span>Повністю відповідає<br>твердженню</span>
         </div>
-        <div class="draggable-obj-row__item">
+        <div class="draggable-obj-row__item pp">
           <a href="#" class="drag drag--pp"></a>
           <span>Відповідає твердженню,<br>але є деякі обмеження</span>
         </div>
-        <div class="draggable-obj-row__item">
+        <div class="draggable-obj-row__item p">
           <a href="#" class="drag drag--p"></a>
           <span>Майже не відповідає<br>твердженню</span>
         </div>
-        <div class="draggable-obj-row__item">
+        <div class="draggable-obj-row__item m">
           <a href="#" class="drag drag--m"></a>
           <span>інформація відсутня<br>в інструкції</span>
         </div>
-        <div class="draggable-obj-row__item">
+        <div class="draggable-obj-row__item" id="last">
           <span>
             Невірна відповідь відмічена<br>сірим кольором.
           </span>
@@ -171,13 +185,13 @@
       <h1>Безрецептурні<br>препарати від печії</h1>
       <div class="half-block">
         <div class="circle" (click)="toggleActiveClass($event, 'selected');">
-          <span>Альгінати</span>
+          Альгінати
           <img src="assets/imgs/selected-left.png" alt="" style="max-width: 390px">
         </div>
       </div>
       <div class="half-block">
         <div class="circle" (click)="toggleActiveClass($event, 'selected');">
-          <span>Антациди</span>
+          Антациди
           <img src="assets/imgs/selected-right.png" alt="" style="max-width: 480px">
         </div>
       </div>
@@ -192,16 +206,15 @@
     <div class="slide slide--6 questions"
          [ngClass]="{'questions--result': showQuestionResults}">
       <h1>Аналіз альгінатів<br>та антацидів</h1>
-      <div class="b-question" 
-        *ngFor="let question of questions;" 
-        [ngStyle]="{'opacity': ((questionId == question.numOfQuestion) ? 1 : 0), 'z-index': ((questionId == question.numOfQuestion) ? 500 : 1)}">
+      <div class="b-question"
+        *ngFor="let question of questions; let i=index" 
+        [ngStyle]="{'opacity': ((currentQuestionNum == i) ? 1 : 0), 'z-index': ((currentQuestionNum == i) ? 500 : 1)}">
         <div class="answers">
           <h4>Альгінати</h4>
           <a href="#" class="answer" *ngFor="let answer of question.leftAnswers">
-            <input type="radio"
-                   [attr.name]="question.radioLeft" 
-                   [attr.value]="answer.answer" 
-                   (click)="changeQuestionId($event, question.isLeftChecked = true, question.isRightChecked);">
+            <input type="radio" class="btn-radio"
+                  [attr.name]="'question-' + i + '-l'"
+                  (click)="leftAnswer = answer.answer">
             <label>
               {{answer.answer}}
             </label>
@@ -210,28 +223,28 @@
         <div class="question">
           <h2>{{question.question}}</h2>
           <div class="descriptions">
-            <small *ngFor="let desc of question.questionDesc; let i=index">{{i+1}}. {{desc.desc}}</small>
+            <small *ngFor="let desc of question.questionDesc; let j=index">{{j+1}}. {{desc.desc}}</small>
           </div>
         </div>
         <div class="answers">
           <h4>Антациди</h4>
           <a href="#" class="answer" *ngFor="let answer of question.rightAnswers">
-            <input type="radio"
-                   [attr.name]="question.radioRight"
-                   [attr.value]="answer.answer" 
-                   (click)="changeQuestionId($event, question.isLeftChecked, question.isRightChecked = true);">
+            <input type="radio" class="btn-radio"
+                   [attr.name]="'question-' + i + '-r'"
+                   (click)="rightAnswer = answer.answer">
             <label>
               {{answer.answer}}
             </label>
           </a>
         </div>
       </div>
-      <div class="b-question b-result" *ngIf="showQuestionResults">
+      <div class="b-question b-result" 
+           [ngStyle]="{'opacity': (showQuestionResults ? 1 : 0), 'z-index': (showQuestionResults ? 500 : 1)}">
         <div class="answers">
           <h4>Альгінати</h4>
           <a href="#" class="answer">
             <label>
-              {{questionsResults.leftSidePts}}
+              {{leftSumAnswer}}
             </label>
           </a>
         </div>
@@ -244,7 +257,7 @@
           <h4>Антациди</h4>
           <a href="#" class="answer">
             <label>
-              {{questionsResults.rightSidePts}}
+              {{rightSumAnswer}}
             </label>
           </a>
         </div>
@@ -259,33 +272,41 @@
           </ion-col>
           <ion-col col-7>
             <video width="640" height="360" controls>
-              <source src="assets/media/pregnant.mp4" type="video/mp4">
+              <source src="assets/imgs/pregnant.mp4" type="video/mp4">
             </video>
           </ion-col>
         </ion-row>
       </ion-grid>
     </div>
-    <div class="slide slide--8">
+    <div class="slide slide--8" [class.active]="currentSlide == 9">
       <h1>Продукція Гавіскон®*</h1>
+      <div class="prod prod--1"></div>
+      <div class="prod prod--2"></div>
+      <div class="prod prod--3"></div>
+      <div class="prod prod--4"></div>
+      <div class="prod prod--5"></div>
+      <div class="prod prod--6"></div>
     </div>
     <div class="slide slide--9">
       <h1>Портрети пацієнтів</h1>
       <ion-grid>
         <ion-row>
           <ion-col col-4>
-            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+            <div class="b-patient">
+              <div class="b-clickable" (click)="toggleActiveClass($event, 'fliped')"></div>
               <div class="front">
                 <img src="assets/imgs/photo-1.png" alt="">
               </div>
               <div class="back">
                 <p>
-                  Дайте, будь ласка, щось від печії, що можна вагітним 
+                  Дайте, будь ласка, щось від печії, що можна вагітним
                 </p>
               </div>
             </div>
           </ion-col>
           <ion-col col-4>
-            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+            <div class="b-patient">
+              <div class="b-clickable" (click)="toggleActiveClass($event, 'fliped')"></div>
               <div class="front">
                 <img src="assets/imgs/photo-2.png" alt="">
               </div>
@@ -297,7 +318,8 @@
             </div>
           </ion-col>
           <ion-col col-4>
-            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+            <div class="b-patient">
+              <div class="b-clickable" (click)="toggleActiveClass($event, 'fliped')"></div>
               <div class="front">
                 <img src="assets/imgs/photo-3.png" alt="">
               </div>
@@ -309,7 +331,8 @@
             </div>
           </ion-col>
           <ion-col col-4>
-            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+            <div class="b-patient">
+              <div class="b-clickable" (click)="toggleActiveClass($event, 'fliped')"></div>
               <div class="front">
                 <img src="assets/imgs/photo-4.png" alt="">
               </div>
@@ -321,7 +344,8 @@
             </div>
           </ion-col>
           <ion-col col-4>
-            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+            <div class="b-patient">
+              <div class="b-clickable" (click)="toggleActiveClass($event, 'fliped')"></div>
               <div class="front">
                 <img src="assets/imgs/photo-5.png" alt="">
               </div>
@@ -333,7 +357,8 @@
             </div>
           </ion-col>
           <ion-col col-4>
-            <div class="b-patient" (click)="toggleActiveClass($event, 'fliped')">
+            <div class="b-patient">
+              <div class="b-clickable" (click)="toggleActiveClass($event, 'fliped')"></div>
               <div class="front">
                 <img src="assets/imgs/photo-6.png" alt="">
               </div>
@@ -364,9 +389,19 @@
       </button>
     </div>
     <div class="additional-inf">
-      <p [ngClass]="{'block': !isFirst && !(currentSlide == 4), 'block--long': currentSlide == 5}" *ngIf="!(currentSlide == 6 || currentSlide == 9 || currentSlide == 7)">{{ bottomText[currentSlide-1] }}</p>
-      <img src="assets/imgs/icon-3.png" alt="icon" *ngIf="!isFirst && !(currentSlide == 4) && !(currentSlide == 6 ||  currentSlide == 9)">
-      <img src="assets/imgs/icon-3_white.png" alt="icon" *ngIf="!isFirst && !(currentSlide == 4) && !(currentSlide == 6 ||  currentSlide == 9)">
+      <p [ngClass]="{'block': true, 'block--long': currentSlide == 5, 'block--show': (bottomText[currentSlide-1].show && bottomText[currentSlide-1].text != '') }">{{ bottomText[currentSlide-1].text }}</p>
+      <img 
+        [src]="bottomText[currentSlide-1].show ? 'assets/imgs/icon-3.png' : 'assets/imgs/icon-3-unactive.png'" 
+        alt="icon" 
+        (click)="bottomText[currentSlide-1].show = !bottomText[currentSlide-1].show"
+        [ngClass]="{'block--transparent': (bottomText[currentSlide-1].text.length == 0)}"
+      >
+      <img 
+        [src]="bottomText[currentSlide-1].show ? 'assets/imgs/icon-3_white.png' : 'assets/imgs/icon-3_white-unactive.png'" 
+        alt="icon" 
+        (click)="bottomText[currentSlide-1].show = !bottomText[currentSlide-1].show"
+        [ngClass]="{'block--transparent': (bottomText[currentSlide-1].text.length == 0)}"
+      >
       <small>Матеріал призначений для спеціалістів у сфері охорони здоров’я.</small>
     </div>
   </div>

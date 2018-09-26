@@ -4,6 +4,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { DragulaModule } from 'ng2-dragula';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -15,7 +17,8 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    DragulaModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,6 +29,7 @@ import { HomePage } from '../pages/home/home';
     StatusBar,
     SplashScreen,
     ScreenOrientation,
+    AndroidFullScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
