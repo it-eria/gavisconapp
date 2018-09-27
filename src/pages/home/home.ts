@@ -295,17 +295,4 @@ export class HomePage {
     }
   }
 
-  // changeQuestionId(e, arg1, arg2) {
-  //   let leftPoint = 0;
-  //   let rightPoint = 0;
-  //   if(arg1) leftPoint += parseFloat(e.target.value);
-  //   if(arg2) rightPoint += parseFloat(e.target.value);
-  //   if(arg1 && arg2) {
-  //     this.questionId += 1;
-  //     this.questionsResults.leftSidePts += leftPoint;
-  //     this.questionsResults.rightSidePts += rightPoint;
-  //   }
-  //   if(this.questionId > this.questions.length) this.showQuestionResults = true;
-  // }
-
 }

@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="no-scroll">
   <div class="zero-slide" [ngClass]="{'zero-slide--hide': showZeroSlide}" (click)="showZeroSlide = !showZeroSlide"></div>
   <div class="slides-wrapper" [ngStyle]="{'left.px': -leftOffset}">
     <div class="slide slide--1" [class.active]="showZeroSlide && (currentSlide == 1)">
@@ -271,8 +271,9 @@
             <img src="assets/imgs/slide-7-inf.png" alt="">
           </ion-col>
           <ion-col col-7>
-            <video width="640" height="360" controls>
-              <source src="assets/imgs/pregnant.mp4" type="video/mp4">
+            <video width="640" height="360" controls="controls" preload="auto" playsinline>
+              <!-- <source src="assets/imgs/pregnant.mp4" type="video/mp4"> -->
+              <source src="assets/imgs/pregnant.flv" type="video/flv">
             </video>
           </ion-col>
         </ion-row>
