@@ -90,4 +90,5 @@
     <plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" />
     <plugin name="cordova-plugin-fullscreen" spec="^1.2.0" />
     <plugin name="com.moust.cordova.videoplayer" />
+    <plugin name="cordova-plugin-background-mode" spec="^0.7.2" />
 </widget>

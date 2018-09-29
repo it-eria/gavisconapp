@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { DragulaModule } from 'ng2-dragula';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
+import { BackgroundMode } from '@ionic-native/background-mode';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -30,6 +31,8 @@ import { HomePage } from '../pages/home/home';
     SplashScreen,
     ScreenOrientation,
     AndroidFullScreen,
+    BackgroundMode,
+    BrowserModule,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

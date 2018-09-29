@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { DragulaService } from 'ng2-dragula';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -22,7 +23,7 @@ export class HomePage {
     // Slide 1
     {
       show: false,
-      text: '* За даними звіту ТОВ «Софтінформ» за грудень 2017, червень 2018',
+      text: '*А02А - Антациди та А02В - Засоби для лікування пептичної виразки та гастроезофагеальної рефлюксної хвороби. **За даними Системи дослідження фармацевтичного ринку “Pharmxplorer” за 2016 – 1 півріччя 2018 років.',
     },
     // Slide 2
     {
@@ -213,7 +214,9 @@ export class HomePage {
       accepts: (el, target, source, sibling) => {
         return target.tagName === 'TD';
       }
-    })
+    });
+
+    
   }
 
   changeSlide(way) {

@@ -1,4 +1,4 @@
-<ion-content class="no-scroll">
+<ion-content class="no-scroll ion-content">
   <div class="zero-slide" [ngClass]="{'zero-slide--hide': showZeroSlide}" (click)="showZeroSlide = !showZeroSlide"></div>
   <div class="slides-wrapper" [ngStyle]="{'left.px': -leftOffset}">
     <div class="slide slide--1" [class.active]="showZeroSlide && (currentSlide == 1)">
@@ -136,15 +136,7 @@
           <td class="drop-cell ppp" dragula="COPYABLE"></td>
         </tr>
         <tr>
-          <td>Алюмінію фосфат</td>
-          <td class="drop-cell pp" dragula="COPYABLE"></td>
-          <td class="drop-cell pp p" dragula="COPYABLE"></td>
-          <td class="drop-cell pp p" dragula="COPYABLE"></td>
-          <td class="drop-cell pp" dragula="COPYABLE"></td>
-          <td class="drop-cell m" dragula="COPYABLE"></td>
-        </tr>
-        <tr>
-          <td>Алюмінію гідроксид + <br>магнію гідроксид</td>
+          <td>Препарати, що<br> містять сполуки<br>алюмінію</td>
           <td class="drop-cell pp" dragula="COPYABLE"></td>
           <td class="drop-cell pp p" dragula="COPYABLE"></td>
           <td class="drop-cell pp p" dragula="COPYABLE"></td>
@@ -274,9 +266,8 @@
             <img src="assets/imgs/slide-7-inf.png" alt="">
           </ion-col>
           <ion-col col-7>
-            <video width="640" height="360" controls="controls" preload="auto" playsinline>
-              <!-- <source src="assets/imgs/pregnant.mp4" type="video/mp4"> -->
-              <source src="assets/imgs/pregnant.flv" type="video/flv">
+            <video width="640" height="360" controls="controls" playsinline preload="metadata">
+              <source src="https://www.youtube.com/embed/MJrAH30WJA8" type="video/mp4">
             </video>
           </ion-col>
         </ion-row>
