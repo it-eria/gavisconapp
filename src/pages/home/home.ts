@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import { DragulaService } from 'ng2-dragula';
 
+import { VideoPlayer ,VideoOptions } from '@ionic-native/video-player';
 
 @Component({
   selector: 'page-home',
@@ -204,7 +205,8 @@ export class HomePage {
     }
   ];
 
-  constructor(public navCtrl: NavController, private platform: Platform, private dragulaService: DragulaService) {
+  videoOpts : VideoOptions ;
+  constructor(public navCtrl: NavController, private platform: Platform, private dragulaService: DragulaService, private videoPlayer : VideoPlayer) {
     this.dragulaService.createGroup('COPYABLE', {
       copy: (el, source) => {
         let allowToCopy = true;
@@ -296,6 +298,18 @@ export class HomePage {
       e.target.classList.add(cl);
       if(cl == 'active') this.writeAnswers++;
     }
+  }
+
+  playVideo(){
+    this.videoOpts = {volume : 1.0};
+    this.videoPlayer.play('file:///storage/emulated/legacy/Download/pregnant.mp4').then(() => {
+      console.log('video completed');
+    }).catch(err => {
+      console.log(err);
+    });    
+  }
+  stopPlayingVideo(){
+    this.videoPlayer.close();
   }
 
 }

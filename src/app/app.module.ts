@@ -8,6 +8,8 @@ import { DragulaModule } from 'ng2-dragula';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { BackgroundMode } from '@ionic-native/background-mode';
 
+import { VideoPlayer } from '@ionic-native/video-player';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
@@ -33,6 +35,7 @@ import { HomePage } from '../pages/home/home';
     AndroidFullScreen,
     BackgroundMode,
     BrowserModule,
+    VideoPlayer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
